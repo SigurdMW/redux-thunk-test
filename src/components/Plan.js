@@ -36,6 +36,11 @@ class Plan extends React.Component {
 							<li>The app should have a basecamp-like loading indicator</li>
 						</ul>
 					</li>
+					<li>Next phase:
+						<ul>
+							<li>Sort the repos correctly (newest first)</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		)
