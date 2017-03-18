@@ -6,7 +6,7 @@ import Main from './Main'
 function mapStateToProps(state){
 	return {
 		users: state.users,
-		hasError: state.hasError,
+		error: state.error,
 		isLoading: state.isLoading,
 		repos: state.userRepos
 	}

@@ -2,15 +2,15 @@ import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import { 
 	users, 
-	fetchUserDataPending,
-	fetchUserDataError,
+	fetchDataPending,
+	fetchDataError,
 	repos
 } from './users'
 
 const rootReducer = combineReducers({
 	users,
-	isLoading: fetchUserDataPending,
-	hasError: fetchUserDataError,
+	isLoading: fetchDataPending,
+	error: fetchDataError,
 	userRepos: repos,
 	routing: routerReducer,
 })

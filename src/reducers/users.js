@@ -1,16 +1,31 @@
-export function fetchUserDataPending(state = false, action){
+import { toLowercase } from '../helpers/helpers'
+
+export function fetchDataPending(state = false, action){
 	switch(action.type){
 		case 'FETCH_USER_DATA_PENDING':
+			return action.isLoading
+		case 'FETCH_DATA_PENDING':
 			return action.isLoading
 		default:
 			return state
 	}
 }
 
-export function fetchUserDataError(state = false, action){
+export function fetchDataError(state = {hasError: false}, action){
 	switch(action.type){
 		case 'FETCH_USER_DATA_ERROR':
-			return action.hasError
+			console.log(action.error)
+			return {
+				...state,
+				hasError: action.hasError,
+				error: action.error
+			}
+		case 'FETCH_DATA_ERROR':
+			return {
+				...state,
+				hasError: action.hasError,
+				error: action.error
+			}
 		default:
 			return state
 	}
@@ -19,6 +34,7 @@ export function fetchUserDataError(state = false, action){
 export function users(state = {}, action){
 	switch(action.type){
 		case 'FETCH_USER_DATA_SUCCESS':
+			action.userdata.login = toLowercase(action.userdata.login)
 			return {
 				...state,
 				[action.userdata.login]: action.userdata

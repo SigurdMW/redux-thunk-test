@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Row, Col } from 'react-grid-system'
 import { Link } from 'react-router'
 
+// Components
+import LoadingBar from './LoadingBar'
+
 class Repos extends Component {
 	componentDidMount(){
 		this.props.fetchUserRepos(this.props.params.username)
@@ -32,11 +35,14 @@ class Repos extends Component {
 		const repos = this.props.repos[this.props.params.username]
 		return (
 			<div>
+				{this.props.isLoading &&
+					<LoadingBar />
+				}
 				<h1>Repos for {this.props.params.username || "noname"}</h1>
 				<Row>	
 					{repos ?
 						repos.map(this.renderRepos) :
-						(<Col md={12}>No repos</Col>)
+						(<Col md={12}></Col>)
 					}
 				</Row>
 			</div>

@@ -29,7 +29,7 @@ class Home extends Component {
 					<button type="submit">Search</button>
 				</form>
 				<h2>Mest søkt</h2>
-				<Link to="/users/SigurdMW">Sigurd</Link>
+				<Link to="/users/sigurdmw">Sigurd</Link>
 				<br />
 				<Link to="/users/tommyno">Tommy</Link>
 			</div>

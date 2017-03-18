@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import LoadingBar from './LoadingBar'
 import UserInfo from './UserInfo'
 
 class User extends Component {
@@ -13,11 +14,7 @@ class User extends Component {
 		return (
 			<div>
 				{this.props.isLoading && 
-					(<div className="load-bar">
-					  <div className="bar"></div>
-					  <div className="bar"></div>
-					  <div className="bar"></div>
-					</div>)
+					<LoadingBar />
 				}
 				<UserInfo user={this.props.users[username]} />
 			</div>
