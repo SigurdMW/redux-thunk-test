@@ -21,6 +21,7 @@ class SingleRepo extends Component {
 				<div>
 					<h1>{repo.name}</h1>
 					<p>{repo.description || "No description"}</p>
+					<p><a href={repo.html_url}>View this repo at GitHub</a></p>
 					<span className="prog-lan">{repo.language || "No language specified"}</span>
 					{repo.private === false ? (<span>Public repo</span>) : (<span>Private repo</span>)}
 				</div>
