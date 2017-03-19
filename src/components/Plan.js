@@ -23,22 +23,22 @@ class Plan extends React.Component {
 							</li>
 							<li>Create paths to repos for that user:
 								<ul>
-									<li>It should be possible to to a "deep dive" in a single repo</li>
-									<li>each repo page should have its own URL</li>
+									<li className="checked">It should be possible to to a "deep dive" in a single repo</li>
+									<li className="checked">each repo page should have its own URL</li>
 								</ul>
 							</li>
 						</ol>
 					</li>
 					<li>Technical stuff:
 						<ul>
-							<li>The pages should be accessible on repload</li>
-							<li>Maintain accessibility as good as possible</li>
-							<li>The app should have a basecamp-like loading indicator</li>
+							<li className="checked">The pages should be accessible on repload</li>
+							<li className="checked">Maintain accessibility as good as possible</li>
+							<li className="checked">The app should have a basecamp-like loading indicator</li>
 						</ul>
 					</li>
 					<li>Next phase:
 						<ul>
-							<li>Sort the repos correctly (newest first)</li>
+							<li className="checked">Sort the repos correctly (newest first)</li>
 						</ul>
 					</li>
 				</ul>

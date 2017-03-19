@@ -1,4 +1,4 @@
-import { toLowercase } from '../helpers/helpers'
+import { toLowercase, sortArrayByDate } from '../helpers/helpers'
 
 export function fetchDataPending(state = false, action){
 	switch(action.type){
@@ -14,7 +14,6 @@ export function fetchDataPending(state = false, action){
 export function fetchDataError(state = {hasError: false}, action){
 	switch(action.type){
 		case 'FETCH_USER_DATA_ERROR':
-			console.log(action.error)
 			return {
 				...state,
 				hasError: action.hasError,
@@ -52,9 +51,10 @@ export function repos(state = {}, action){
 				[action.username]: action.repos
 			}
 		case 'FETCH_USER_REPOS_SUCCESS':
+			const reposSorted = sortArrayByDate("desc", action.repos, "created_at")
 			return {
 				...state,
-				[action.username]: action.repos
+				[action.username]: reposSorted
 			}
 		default:
 			return state
