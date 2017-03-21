@@ -34,11 +34,28 @@ class Plan extends React.Component {
 							<li className="checked">The pages should be accessible on repload</li>
 							<li className="checked">Maintain accessibility as good as possible</li>
 							<li className="checked">The app should have a basecamp-like loading indicator</li>
+							<li className="checked">Sort the repos correctly (newest first)</li>
 						</ul>
 					</li>
 					<li>Next phase:
 						<ul>
-							<li className="checked">Sort the repos correctly (newest first)</li>
+							<li className="">Tests:
+								<ul>
+									<li className="subheader">Functional test</li>
+									<li>Setup tests for all components</li>
+									<li>Setup tests for all actions</li>
+									<li>Setup tests for all reducers</li>
+									<li>Setup tests for all helpers</li>
+									<li>Setup tests for the store</li>
+									<li className="subheader">Visual test</li>
+									<li>Test visual components // CSS</li>
+								</ul>
+							</li>
+							<li>CSS:
+								<ul>
+									<li>Check out post-css / CSS Next?</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 				</ul>

@@ -33,16 +33,17 @@ class Repos extends Component {
 	}
 	render(){
 		const repos = this.props.repos[this.props.params.username]
+		const hasRepos = (repos && repos.length > 0) ? true : false
 		return (
 			<div>
 				{this.props.isLoading &&
 					<LoadingBar />
 				}
-				<h1>Repos for {this.props.params.username || "noname"}</h1>
+				<h1>Repos for {this.props.params.username}</h1>
 				<Row>	
-					{repos ?
+					{hasRepos ?
 						repos.map(this.renderRepos) :
-						(<Col md={12}></Col>)
+						(<Col md={12}>Obs, {this.props.params.username} doesn't have any repos yet!</Col>)
 					}
 				</Row>
 			</div>

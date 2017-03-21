@@ -16,6 +16,13 @@ ul li.checked:after {
 	margin-left:.25em;
 }
 
+.subheader {
+  font-weight: bold;
+  text-decoration: underline;
+  list-style-type: none;
+  padding-top:1em;
+}
+
 /*
 #
 #	Site styles
