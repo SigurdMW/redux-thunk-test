@@ -49,6 +49,9 @@ class Plan extends React.Component {
 									<li>Setup tests for the store</li>
 									<li className="subheader">Visual test</li>
 									<li>Test visual components // CSS</li>
+									<li>Setup React Storybook? https://github.com/storybooks/react-storybook#getting-started</li>
+									<li>Consider Selenium standalone: http://www.creativebloq.com/web-design/automate-visual-regression-testing-111517944</li>
+									<li>Or  this https://css-tricks.com/automating-css-regression-testing/</li>
 								</ul>
 							</li>
 							<li>CSS:
